@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="jumbotron" style="background-color: lightgrey; border: solid; border-color: black" >
+      <div class="bildwechsel"></div>
+      <h2 style="text-align: center; margin-top: 20px">
+        Pokedex powered by Prof. Eich
+      </h2>
+
+      <div id="myCarousel" class="carousel slide center" data-ride="carousel" data-interval="500">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <div class="item active">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="Los Angeles">
+          </div>
+          <div class="item" *ngFor="let a of fakeArray; let index = index">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ index + 2 }}.png" alt="Chicago">
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  <app-poke></app-poke>
+
+<footer class="footer">
+
+    <span class="text-muted">All rights reserved by Prof. Eich</span>
+
+</footer>
+

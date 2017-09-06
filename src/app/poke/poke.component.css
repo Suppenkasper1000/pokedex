@@ -1,0 +1,30 @@
+.cursor {
+cursor: pointer;
+}
+#row1 {
+  text-align: center;
+}
+#thumbnail {
+  border: solid;
+  margin-left: 55px;
+  border-color: black;
+  margin-right: -30px;
+  background: lightgrey;
+  width: 150px;
+}
+#loadMoreButton {
+  margin-left: 35px;
+  margin-top: 10px;
+}
+#modalPics {
+  padding-left: 150px;
+}
+#tabledance {
+  text-align: left;
+  margin-left: 190px;
+}
+
+#description {
+  margin-top: 10px;
+  text-align: center;
+}
