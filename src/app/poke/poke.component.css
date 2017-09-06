@@ -33,6 +33,7 @@ cursor: pointer;
   color: black;
   border: solid;
   border-width: thin;
+  padding: 2px;
 }
 .fire {
   background-color: #F45545;
