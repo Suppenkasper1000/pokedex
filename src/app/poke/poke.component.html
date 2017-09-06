@@ -36,12 +36,10 @@
         </div>
         </div>
           <table id="tabledance">
-        <tr>Height: {{selectedPokemon?.height}} ft</tr>
-        <tr>Weight: {{selectedPokemon?.weight}} kg</tr>
-        <tr>Typ1: {{selectedPokemon?.types[0].type.name}}</tr>
-        <div *ngIf="selectedPokemon?.types[1]">
-        <tr>Typ2: {{selectedPokemon?.types[1]?.type.name}}</tr>
-        </div>
+        <tr>Height: {{selectedPokemon?.height / 10}} m</tr>
+        <tr>Weight: {{selectedPokemon?.weight / 10}} kg</tr>
+        <tr class="type" [ngClass]="selectedPokemon?.types[0].type.name">{{selectedPokemon?.types[0].type.name | capitalize}}</tr>
+        <tr *ngIf="selectedPokemon?.types[1]" class="type" [ngClass]="selectedPokemon?.types[1].type.name">{{selectedPokemon?.types[1]?.type.name | capitalize}}</tr>
           </table>
         <p id="description">{{pokemon?.flavor_text_entries[1].flavor_text}}</p>
       </div>
@@ -51,23 +49,5 @@
     </div>
   </div>
 </div>
-
-
-
-<!--SAVE
-<div class="container">
-  <div class="row" style="text-align: center">
-    <div *ngFor="let poke of pokemonlist" >
-      <div class="thumbnail" style="border: solid;  margin-left: 50px;  border-color: black; margin-top: 10px; margin-right: -30px; background: lightgrey; width: 150px" >
-        <h3>#{{poke.id}}</h3>
-        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{poke.id}}.png" alt="...">
-        <div class="caption">
-          <h4> {{poke.name.charAt(0).toUpperCase()+poke.name.substr(1)}}</h4>
-        </div>
-      </div>
-    </div>
-
-  </div>
-  <button  style="margin-left: 35px; margin-top: 10px" type="button" class="btn btn-success" (click)="loadMore()">weitere..</button>
 </div>
--->
+
