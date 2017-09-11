@@ -9,14 +9,33 @@ import {PokedexService} from "./api/pokedex.service";
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 import { CapitalizePipe } from './poke/capitalize.pipe';
+import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about/about.component';
+
+
+
+
+const appRoutes: Routes = [
+  { path: 'poke', component: PokeComponent },
+  { path: 'about',      component: AboutComponent },
+  { path: '',
+    redirectTo: '/poke',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     PokeComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    AboutComponent
   ],
   imports: [
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    ),
     BrowserModule,
     FormsModule,
     HttpModule,

@@ -1,8 +1,22 @@
-<div class="container">
-  <div class="jumbotron" style="background-color: lightgrey; border: solid; border-color: black" >
+<div class="font">
+<div id="nav" class="container-fluid">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/poke" routerLinkActive="active">Pokedex</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="http://pokeapi.co/" target="_blank">PokeApi</a>
+    </li>
+  </ul>
+</div>
+  <div class="container">
+  <div class="jumbotron" id="jumbotron"   >
       <div class="bildwechsel"></div>
-      <h2 style="text-align: center; margin-top: 20px">
-        Pokedex powered by Prof. Eich
+      <h2 id="headlineMain" >
+        Pokedex powered by Prof. Oak
       </h2>
 
       <div id="myCarousel" class="carousel slide center" data-ride="carousel" data-interval="500">
@@ -18,11 +32,8 @@
       </div>
   </div>
   </div>
-  <app-poke></app-poke>
-
+<router-outlet></router-outlet>
 <footer class="footer">
-
-    <span class="text-muted">All rights reserved by Prof. Eich</span>
-
+  <span class="text-muted">All rights reserved by Prof. Oak</span>
 </footer>
-
+</div>
