@@ -23,7 +23,7 @@
   <div class="modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header"  style="background-color: #E83729" >
+      <div class="modal-header"  [ngClass]="selectedPokemon?.types[0].type.name" >
         <div class="row">
         <h4 class="modal-title">#{{selectedPokemon?.id}} {{selectedPokemon?.name | capitalize }}</h4>
         </div>
