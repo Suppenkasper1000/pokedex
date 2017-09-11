@@ -11,6 +11,7 @@ import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 import { CapitalizePipe } from './poke/capitalize.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about/about.component';
+import {PokefanComponent} from "./pokefan/pokefan.component";
 
 
 
@@ -18,6 +19,7 @@ import { AboutComponent } from './about/about/about.component';
 const appRoutes: Routes = [
   { path: 'poke', component: PokeComponent },
   { path: 'about',      component: AboutComponent },
+  { path: 'pokefan',      component: PokefanComponent },
   { path: '',
     redirectTo: '/poke',
     pathMatch: 'full'
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     AppComponent,
     PokeComponent,
     CapitalizePipe,
-    AboutComponent
+    AboutComponent,
+    PokefanComponent
   ],
   imports: [
     RouterModule.forRoot(
