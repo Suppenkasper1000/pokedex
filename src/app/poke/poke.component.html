@@ -19,8 +19,8 @@
   </div>
 
 <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+<div id="myModal"  class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header"  [ngClass]="selectedPokemon?.types[0].type.name" >
@@ -35,14 +35,74 @@
         <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/{{this.selectedPokemon?.id}}.png" alt="No picture available">
         </div>
         </div>
-          <table id="tabledance">
-        <tr>Height: {{selectedPokemon?.height / 10}} m</tr>
-        <tr>Weight: {{selectedPokemon?.weight / 10}} kg</tr>
-        <tr class="type" [ngClass]="selectedPokemon?.types[0].type.name">{{selectedPokemon?.types[0].type.name | capitalize}}</tr>
-        <tr *ngIf="selectedPokemon?.types[1]" class="type" [ngClass]="selectedPokemon?.types[1].type.name">{{selectedPokemon?.types[1]?.type.name | capitalize}}</tr>
+          <table class="tabledance">
+            <tr>
+        <td class="type" [ngClass]="selectedPokemon?.types[0].type.name">{{selectedPokemon?.types[0].type.name | capitalize}}</td>
+        <td *ngIf="selectedPokemon?.types[1]" class="type" [ngClass]="selectedPokemon?.types[1].type.name">{{selectedPokemon?.types[1]?.type.name | capitalize}}</td>
+            </tr>
           </table>
         <p id="description">{{pokemon?.flavor_text_entries[1].flavor_text}}</p>
+        <div [ngClass]="selectedPokemon?.types[0].type.name" id="facts">
+          <h4 id="factsInADiv">Facts</h4>
+          <table class="tabledance">
+            <tr>Height: {{selectedPokemon?.height / 10}} m</tr>
+            <tr>Weight: {{selectedPokemon?.weight / 10}} kg</tr>
+          </table>
+          <div>
+            <div id="progressBlock">
+              <div class="progressEntries">
+            <p class="progress-label">{{selectedPokemon?.stats[0].stat.name | capitalize}}</p>
+              <div class="progress">
+              <div class="progress-bar bg-success" role="progressbar" [style.width.%]="(selectedPokemon.stats[0].base_stat/200)*100"  attr.aria-valuenow="{{selectedPokemon?.stats[0].base_stat}}" aria-valuemin="0" aria-valuemax="200">
+                {{selectedPokemon?.stats[0].base_stat}}
+              </div>
+              </div>
+              </div>
+            <div class="progressEntries">
+              <p class="progress-label">{{selectedPokemon?.stats[1].stat.name | capitalize}}</p>
+              <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" [style.width.%]="(selectedPokemon.stats[1].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[1].base_stat}}" aria-valuemin="0" aria-valuemax="200">
+                  {{selectedPokemon?.stats[1].base_stat}}
+                </div>
+              </div>
+            </div>
+              <div class="progressEntries">
+              <p class="progress-label">{{selectedPokemon?.stats[2].stat.name | capitalize}}</p>
+              <div class="progress">
+                <div class="progress-bar bg-alert" role="progressbar" [style.width.%]="(selectedPokemon.stats[2].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[2].base_stat}}" aria-valuemin="0" aria-valuemax="200">
+                  {{selectedPokemon?.stats[2].base_stat}}
+                </div>
+              </div>
+            </div>
+            <div class="progressEntries">
+              <p class="progress-label">{{selectedPokemon?.stats[3].stat.name | capitalize}}</p>
+              <div class="progress">
+                <div class="progress-bar bg-info" role="progressbar" [style.width.%]="(selectedPokemon.stats[3].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[3].base_stat}}" aria-valuemin="0" aria-valuemax="200">
+                  {{selectedPokemon?.stats[3].base_stat}}
+                </div>
+              </div>
+            </div>
+            <div class="progressEntries">
+              <p class="progress-label">{{selectedPokemon?.stats[4].stat.name | capitalize}}</p>
+              <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" [style.width.%]="(selectedPokemon.stats[4].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[4].base_stat}}" aria-valuemin="0" aria-valuemax="200">
+                  {{selectedPokemon?.stats[4].base_stat}}
+                </div>
+              </div>
+            </div>
+            <div class="progressEntries">
+              <p class="progress-label">{{selectedPokemon?.stats[5].stat.name | capitalize}}</p>
+              <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" [style.width.%]="(selectedPokemon.stats[5].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[5].base_stat}}" aria-valuemin="0" aria-valuemax="200">
+                  {{selectedPokemon?.stats[5].base_stat}}
+                </div>
+              </div>
+              </div>
+            </div>
+        </div>
+        </div>
       </div>
+
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>

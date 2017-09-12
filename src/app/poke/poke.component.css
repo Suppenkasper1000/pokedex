@@ -19,7 +19,7 @@ cursor: pointer;
 #modalPics {
   padding-left: 150px;
 }
-#tabledance {
+.tabledance {
   text-align: left;
   margin-left: 190px;
 }
@@ -29,10 +29,10 @@ cursor: pointer;
   text-align: center;
 }
 .type {
-  display: inline-block;
   color: black;
   border: solid;
   border-width: thin;
+  margin-left: 2px;
   padding: 2px;
 }
 .fire {
@@ -101,4 +101,33 @@ cursor: pointer;
 
 .ghost {
   background-color: #75577D;
+}
+
+#facts {
+  text-align: center;
+  height: 35px;
+}
+#factsInADiv {
+  padding-top: 5px;
+}
+
+.dmodal-body {
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+.modal-content {
+  height: 100%;
+}
+.modal-dialog {
+  height:900px !important;
+}
+
+.progress {
+  margin-top: -10px;
+}
+#progressBlock {
+  margin-top: 25px;
+}
+.progressEntries {
+  margin-top: -15px;
 }
