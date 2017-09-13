@@ -131,3 +131,6 @@ cursor: pointer;
 .progressEntries {
   margin-top: -15px;
 }
+#lastEntry{
+  background-color: #8d7654;
+}

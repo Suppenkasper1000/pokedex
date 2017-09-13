@@ -93,7 +93,7 @@
             <div class="progressEntries">
               <p class="progress-label">{{selectedPokemon?.stats[5].stat.name | capitalize}}</p>
               <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" [style.width.%]="(selectedPokemon.stats[5].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[5].base_stat}}" aria-valuemin="0" aria-valuemax="200">
+                <div class="progress-bar" id="lastEntry" role="progressbar" [style.width.%]="(selectedPokemon.stats[5].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[5].base_stat}}" aria-valuemin="0" aria-valuemax="200">
                   {{selectedPokemon?.stats[5].base_stat}}
                 </div>
               </div>
