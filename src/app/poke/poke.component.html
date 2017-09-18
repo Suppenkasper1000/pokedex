@@ -23,7 +23,7 @@
   <div class="modal-dialog" role="document">
     <!-- Modal content-->
     <div class="modal-content">
-      <div class="modal-header"  [ngClass]="selectedPokemon?.types[0].type.name" >
+      <div class="modal-header"  [ngClass]="selectedPokemon?.types[0].type.name">
         <div class="row">
         <h4 class="modal-title">#{{selectedPokemon?.id}} {{selectedPokemon?.name | capitalize }}</h4>
         </div>
@@ -42,13 +42,14 @@
             </tr>
           </table>
         <p id="description">{{pokemon?.flavor_text_entries[1].flavor_text}}</p>
-        <div [ngClass]="selectedPokemon?.types[0].type.name" id="facts">
-          <h4 id="factsInADiv">Facts</h4>
+        <div [ngClass]="selectedPokemon?.types[0].type.name" class="facts">
+          <h4 class="factsInADiv">Facts</h4>
           <table class="tabledance">
-            <tr>Height: {{selectedPokemon?.height / 10}} m</tr>
-            <tr>Weight: {{selectedPokemon?.weight / 10}} kg</tr>
+            <tr>Height: {{selectedPokemon?.height / 10}}m</tr>
+            <tr>Weight: {{selectedPokemon?.weight / 10}}kg</tr>
           </table>
-          <div>
+          <div class="facts" id="stats" [ngClass]="selectedPokemon?.types[0].type.name">
+            <h4 class="factsInADiv">Stats</h4>
             <div id="progressBlock" *ngFor="let a of countArray; let index = index">
               <div class="progressEntries">
             <p class="progress-label">{{selectedPokemon?.stats[index].stat.name | capitalize}}</p>

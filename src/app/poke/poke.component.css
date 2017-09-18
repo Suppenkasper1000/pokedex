@@ -23,7 +23,6 @@ cursor: pointer;
   text-align: left;
   margin-left: 190px;
 }
-
 #description {
   margin-top: 10px;
   text-align: center;
@@ -38,79 +37,64 @@ cursor: pointer;
 .fire {
   background-color: #F45545;
 }
-
 .water {
   background-color: #558BCF;
 }
-
 .grass {
   background-color: #589F43;
 }
-
 .poison {
   background-color: #7848a6;
 }
-
 .flying {
   background-color: #E3C066;
 }
-
 .normal {
   background-color: #bd8d41;
 }
-
 .bug {
   background-color: #acbe16;
 }
-
 .electric {
   background-color: #F3BE1F;
 }
-
 .ground {
   background-color: #8d7654;
 }
-
 .dragon {
   background-color: #A485C2;
 }
-
 .psychic {
   background-color: #EE86A5;
 }
-
 .fairy {
   background-color: #BF6481;
 }
-
 .ice {
   background-color: #64AFF5;
 }
-
 .rock {
   background-color: #5e5744;
 }
-
 .fighting {
   background-color: #915656;
 }
-
 .steel {
   background-color: #949494;
 }
-
 .ghost {
   background-color: #75577D;
 }
-
-#facts {
-  text-align: center;
+.facts {
+  text-align: left;
   height: 35px;
+  border-radius: 5px;
 }
-#factsInADiv {
+.factsInADiv {
+  text-align: center;
   padding-top: 5px;
+  font-weight: bold;
 }
-
 .dmodal-body {
   max-height: calc(100vh - 200px);
   overflow-y: auto;
@@ -119,19 +103,18 @@ cursor: pointer;
   height: 100%;
 }
 .modal-dialog {
-  height:900px !important;
+  height:825px !important;
 }
-
 .progress {
   margin-top: -10px;
 }
 #progressBlock {
   margin-top: 25px;
+  padding-top: 10px;
 }
 .progressEntries {
   margin-top: -15px;
 }
-
 #color0{
 background-color: #278022;
 }
@@ -146,4 +129,10 @@ background-color: #278022;
 }
 #color4{
   background-color: #ff830a;
+}
+#stats{
+  margin-top: -5px;
+}
+.modal-title{
+  font-weight: bold;
 }
