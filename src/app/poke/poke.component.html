@@ -49,60 +49,19 @@
             <tr>Weight: {{selectedPokemon?.weight / 10}} kg</tr>
           </table>
           <div>
-            <div id="progressBlock">
+            <div id="progressBlock" *ngFor="let a of countArray; let index = index">
               <div class="progressEntries">
-            <p class="progress-label">{{selectedPokemon?.stats[0].stat.name | capitalize}}</p>
+            <p class="progress-label">{{selectedPokemon?.stats[index].stat.name | capitalize}}</p>
               <div class="progress">
-              <div class="progress-bar bg-success" role="progressbar" [style.width.%]="(selectedPokemon.stats[0].base_stat/200)*100"  attr.aria-valuenow="{{selectedPokemon?.stats[0].base_stat}}" aria-valuemin="0" aria-valuemax="200">
-                {{selectedPokemon?.stats[0].base_stat}}
+              <div class="progress-bar" id="color{{index}}" role="progressbar" [style.width.%]="(selectedPokemon.stats[index].base_stat/200)*100"  attr.aria-valuenow="{{selectedPokemon?.stats[index].base_stat}}" aria-valuemin="0" aria-valuemax="200">
+                {{selectedPokemon?.stats[index].base_stat}}
               </div>
-              </div>
-              </div>
-            <div class="progressEntries">
-              <p class="progress-label">{{selectedPokemon?.stats[1].stat.name | capitalize}}</p>
-              <div class="progress">
-                <div class="progress-bar bg-danger" role="progressbar" [style.width.%]="(selectedPokemon.stats[1].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[1].base_stat}}" aria-valuemin="0" aria-valuemax="200">
-                  {{selectedPokemon?.stats[1].base_stat}}
-                </div>
-              </div>
-            </div>
-              <div class="progressEntries">
-              <p class="progress-label">{{selectedPokemon?.stats[2].stat.name | capitalize}}</p>
-              <div class="progress">
-                <div class="progress-bar bg-alert" role="progressbar" [style.width.%]="(selectedPokemon.stats[2].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[2].base_stat}}" aria-valuemin="0" aria-valuemax="200">
-                  {{selectedPokemon?.stats[2].base_stat}}
-                </div>
-              </div>
-            </div>
-            <div class="progressEntries">
-              <p class="progress-label">{{selectedPokemon?.stats[3].stat.name | capitalize}}</p>
-              <div class="progress">
-                <div class="progress-bar bg-info" role="progressbar" [style.width.%]="(selectedPokemon.stats[3].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[3].base_stat}}" aria-valuemin="0" aria-valuemax="200">
-                  {{selectedPokemon?.stats[3].base_stat}}
-                </div>
-              </div>
-            </div>
-            <div class="progressEntries">
-              <p class="progress-label">{{selectedPokemon?.stats[4].stat.name | capitalize}}</p>
-              <div class="progress">
-                <div class="progress-bar bg-warning" role="progressbar" [style.width.%]="(selectedPokemon.stats[4].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[4].base_stat}}" aria-valuemin="0" aria-valuemax="200">
-                  {{selectedPokemon?.stats[4].base_stat}}
-                </div>
-              </div>
-            </div>
-            <div class="progressEntries">
-              <p class="progress-label">{{selectedPokemon?.stats[5].stat.name | capitalize}}</p>
-              <div class="progress">
-                <div class="progress-bar" id="lastEntry" role="progressbar" [style.width.%]="(selectedPokemon.stats[5].base_stat/200)*100" attr.aria-valuenow="{{selectedPokemon?.stats[5].base_stat}}" aria-valuemin="0" aria-valuemax="200">
-                  {{selectedPokemon?.stats[5].base_stat}}
-                </div>
               </div>
               </div>
             </div>
         </div>
         </div>
       </div>
-
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
       </div>
