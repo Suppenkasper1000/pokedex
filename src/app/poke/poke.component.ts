@@ -17,6 +17,8 @@ export class PokeComponent implements OnInit {
   offset: number = 0;
   selectedPokemon: Pokemon;
 
+  countArray = new Array(6);
+
 
   constructor(private http: Http, private  pokedexService: PokedexService){
   }

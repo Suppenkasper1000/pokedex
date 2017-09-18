@@ -131,3 +131,19 @@ cursor: pointer;
 .progressEntries {
   margin-top: -15px;
 }
+
+#color0{
+background-color: #278022;
+}
+#color1{
+  background-color: #8b5a1a;
+}
+#color2{
+   background-color: #ff2b14;
+ }
+#color3{
+  background-color: #45c7e0;
+}
+#color4{
+  background-color: #ff830a;
+}
